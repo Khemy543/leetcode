@@ -19,6 +19,7 @@ class Solution:
             else:
                 tail.next = list2
                 list2 = list2.next
+            # move pointer to next node
             tail = tail.next
         
         if list1:
