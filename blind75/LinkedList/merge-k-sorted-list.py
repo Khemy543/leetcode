@@ -32,6 +32,8 @@ class Solution:
             else:
                 tail.next = l2
                 l2 = l2.next
+            # move pointer to next node
+            tail = tail.next
         
         if l1:
             tail.next = l1
