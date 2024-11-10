@@ -9,5 +9,5 @@ class Solution:
                 charSet.remove(s[L])
                 L = L + 1
             charSet.add(s[R])
-            res = max(maxLength, R - L + 1)
+            maxLength = max(maxLength, R - L + 1)
         return maxLength

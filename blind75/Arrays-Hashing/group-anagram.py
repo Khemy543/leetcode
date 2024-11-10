@@ -15,4 +15,4 @@ class Solution:
         return result.values()
     
 
-print(Solution.groupAnagrams('a', ["act","pots","tops","cat","stop","hat"]))
+print(Solution().groupAnagrams(["act","pots","tops","cat","stop","hat"]))
