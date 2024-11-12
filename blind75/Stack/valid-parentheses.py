@@ -9,4 +9,7 @@ class Solution:
                 continue
             if not stack or stack.pop() != hashMap[a]:
                 return False
-        return not stack
+        return f'{not stack}'
+    
+
+print(Solution().isValid('(({()}))'))
