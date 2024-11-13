@@ -8,6 +8,7 @@ class Solution:
         for n in nums:
             count[n] = 1 + count.get(n, 0)
         
+        # to sort them
         for key, value in count.items():
             freq[value].append(key)
         

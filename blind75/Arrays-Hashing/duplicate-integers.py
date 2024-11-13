@@ -16,7 +16,6 @@ from typing import List
 class Solution:
     def hasDuplicate(self, nums: List[int]) -> bool:
         hashset = set()
-        print(len(hashset))
 
         for n in nums:
             if n in hashset:
