@@ -24,7 +24,7 @@ class Solution:
         for row in range(rows):
             # get all rows that touch the pacific ocean 
             dfs(row, 0, pacific, heights[row][0])
-            # get all rows that touch the pacific ocean 
+            # get all rows that touch the atlantic ocean 
             dfs(row, cols - 1, atlantic, heights[row][cols-1])
         
         # find common values of the pacific and atlantic ocean
