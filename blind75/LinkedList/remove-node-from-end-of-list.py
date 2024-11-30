@@ -14,7 +14,7 @@ class Solution:
         left = dummy
         right = head
         
-        # right is starts from the nth node
+        # right starts from the nth node, shift right till it reaches the nth node
         while n > 0 and right:
             right = right.next
             n -= 1

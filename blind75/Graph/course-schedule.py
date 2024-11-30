@@ -31,3 +31,32 @@ class Solution:
             if not dfs(crs):
                 return False
         return True
+    
+        # using dfs
+
+        graph = defaultdict(list)
+        visited = set()
+        queue = []
+
+        # create a graph
+        for crs, pre in prerequisites:
+            graph[crs].append(pre)
+
+        
+        def bfs(crs):
+            if crs in visited:
+                return False
+            
+            queue.append(crs)
+            visited.add(crs)
+
+            while queue:
+                cr = queue.pop(0)
+                for pr in graph[cr]:
+                    if pr in visited:
+                        return False
+                    visited.add(pre)
+                    queue.append(pre)
+            return True
+
+        return bfs(0)

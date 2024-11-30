@@ -3,6 +3,7 @@ class Solution:
     def search(self, nums: List[int], target: int) -> int:
         L = 0
         R = len(nums) - 1
+        print(nums[-1])
 
         while L <= R:
             mid = (L+R)//2
@@ -22,3 +23,6 @@ class Solution:
                 else:
                     L = mid + 1
         return -1
+    
+
+print(Solution().search([1,2,3,4,5,6], 3))
