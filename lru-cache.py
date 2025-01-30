@@ -11,6 +11,7 @@ class LRUCache:
         self.cache = {} # map keys to nodes
 
         # create least and most recently used nodes
+        # left = LRU, right = MRU
         self.left, self.right = Node(0,0), Node(0,0)
         # connect the two nodes
         self.left.next, self.right.prev = self.right, self.left
@@ -32,6 +33,7 @@ class LRUCache:
     def get(self, key: int) -> int:
         if key in self.cache:
             # update the most recent node (mlu)
+            self.remove(self.cache[key])
             self.insert(self.cache[key])
             return self.cache[key].val
         return -1
