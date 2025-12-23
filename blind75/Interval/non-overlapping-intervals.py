@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
     def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
-        intervals.sort()
+        intervals.sort(key=lambda i:i[0])
         count = 0
         lastEnd = intervals[0][1]
 
